@@ -271,6 +271,12 @@ a {
   padding: 3vh 50px 10vh 75px;
 }
 
+.seccions.seccion-videos {
+  background-color: white;
+  color: #555;
+  padding: 1vh 50px 5vh 75px;
+}
+
 /* Typo */
 h1,
 .h1,
@@ -438,6 +444,10 @@ i {
   &:last-child {
     margin-right: 0;
   }
+}
+
+#videos .columnas {
+  grid-template-columns: auto auto auto;
 }
 
 @media screen and (max-width: 980px) {
