@@ -57,14 +57,12 @@ html {
   flex-flow: column nowrap;
   align-items: stretch;
   min-height: 60vh;
-  width: 100%;
   align-content: center;
   padding: 20vh 50px 20vh 75px;
 }
 .seccion .seccion_inner {
   height: 100%;
-  max-width: 800px;
-  margin: auto auto auto 0;
+  margin: auto 0 auto 0;
 }
 .seccion.seccion--hola {
   background-color: #fdef52;
@@ -86,6 +84,11 @@ h4,
   line-height: 1;
   letter-spacing: -1px;
 }
+
+.contenido-texto h2 {
+  margin: 0 0 0.2em;
+}
+
 @media (min-width: 30rem) {
   h1,
   .h1,
@@ -140,12 +143,12 @@ h1,
 }
 h2,
 .h2 {
-  font-size: 1.2rem;
+  font-size: 0.75rem;
 }
 @media (min-width: 30rem) {
   h2,
   .h2 {
-    font-size: 2.5rem;
+    font-size: 1.75em;
   }
 }
 .pre {
@@ -187,4 +190,63 @@ p a:hover {
   display: block;
   font-size: 0.875rem;
   margin: 0;
+}
+
+.wrapper {
+  padding: 5px;
+  max-width: 960px;
+  width: 95%;
+  margin: 20px auto;
+}
+.columnas {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  margin: 5px 0;
+}
+
+.columna {
+  flex: 1;
+  border: 1px solid gray;
+  margin: 2px;
+  padding: 10px;
+  &:first-child {
+    margin-left: 0;
+  }
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+@media screen and (max-width: 980px) {
+  .columnas .columna {
+    margin-bottom: 5px;
+    flex-basis: 40%;
+    &:nth-last-child(2) {
+      margin-right: 0;
+    }
+    &:last-child {
+      flex-basis: 100%;
+      margin: 0;
+    }
+  }
+}
+
+@media screen and (max-width: 680px) {
+  .columnas .columna {
+    flex-basis: 100%;
+    margin: 0 0 5px 0;
+  }
+}
+
+.contenedor {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+i {
+  display: block;
+  width: 20%;
+  height: auto;
 }
