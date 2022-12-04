@@ -567,12 +567,12 @@ footer p {
 }
 
 .timeline-bloque .timeline-anho.izquierda strong {
-  margin-left: -75px;
+  margin-left: -140px;
 }
 
 @media only screen and (min-width: 1170px) {
   .timeline-bloque {
-    margin: 4em 0;
+    margin: 0 0;
   }
 
   .timeline-bloque:first-child {
@@ -686,6 +686,18 @@ footer p {
     float: right;
   }
 
+  .timeline-bloque:nth-child(3) .timeline-contenido {
+    float: right;
+  }
+
+  .timeline-bloque:nth-child(3) .timeline-contenido::before {
+    top: 24px;
+    left: auto;
+    right: 100%;
+    border-color: transparent;
+    border-right-color: #ebebeb;
+  }
+
   .timeline-bloque:nth-child(even) .timeline-contenido::before {
     top: 24px;
     left: auto;
@@ -693,14 +705,4 @@ footer p {
     border-color: transparent;
     border-right-color: #ebebeb;
   }
-}
-
-#full-stars-example .rating-group {
-  display: inline-flex;
-}
-
-#full-stars-example .rating__label {
-  cursor: pointer;
-  padding: 0 0.1em;
-  font-size: 2rem;
 }
