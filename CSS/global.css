@@ -220,7 +220,7 @@ a {
   text-transform: none;
 }
 .anchornav a:hover {
-  color: #de5f5f;
+  color: white;
 }
 .anchornav a:hover span {
   opacity: 1;
@@ -244,9 +244,27 @@ a {
   max-width: 800px;
 }
 .seccion.seccion--hola {
-  background-color: #fdef52;
   color: #181818;
   height: 100vh;
+  background-size: cover;
+  background-image: url("../assets/vu-anh-TiVPTYCG_3E-unsplash.jpg");
+}
+.seccion.seccion--hola::before {
+  color: rgba(9, 162, 255, 0.7);
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: currentColor;
+  z-index: 1;
+}
+.seccion.seccion--hola .seccion_inner {
+  max-width: 640px;
+  z-index: 2;
+  padding: 40px 15px;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.15);
 }
 .seccion.seccion--intro,
 .seccion.seccion--historia,
@@ -266,7 +284,7 @@ a {
   align-items: center;
 }
 .seccion.seccion--contacto {
-  background-color: #fdef52;
+  background-color: rgba(9, 162, 255, 0.85);
   color: #181818;
   padding: 3vh 50px 10vh 75px;
 }
@@ -495,7 +513,7 @@ footer p {
 }
 
 .footer-contacto {
-  background-color: #fdef52;
+  background-color: rgba(9, 162, 255, 0.85);
 }
 
 /*Timeline*/
@@ -809,7 +827,7 @@ fieldset {
   cursor: pointer;
   width: 100%;
   border: none;
-  background: #fdef52;
+  background: rgba(9, 162, 255, 0.85);
   color: #181818;
   margin: 0 0 5px;
   padding: 10px;
