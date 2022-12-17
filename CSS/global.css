@@ -1,7 +1,8 @@
+/* Main */
 html {
   box-sizing: border-box;
   font-family: "ff-meta-serif-web-pro", sans-serif;
-  color: #555;
+  color: var(--main-gray);
   font-size: 16px;
 }
 
@@ -119,6 +120,12 @@ a {
   text-decoration: none;
 }
 
+i {
+  width: 10%;
+  height: auto;
+  text-align: center;
+}
+
 /* Barra de navegación */
 .lado {
   position: fixed;
@@ -181,8 +188,6 @@ a {
 .lado .abajo:hover a:hover {
   color: rgba(0, 0, 0, 0.8);
 }
-
-/* Primera navegación */
 .anchornav {
   margin: 0;
   padding: 0;
@@ -224,7 +229,7 @@ a {
 }
 .anchornav a:hover span {
   opacity: 1;
-  color: #181818;
+  color: var(--main-black);
 }
 
 /* Secciones */
@@ -235,16 +240,15 @@ a {
   align-items: stretch;
   min-height: 60vh;
   align-content: center;
-  padding: 20vh 50px 20vh 75px;
+  padding: 10vh 50px 0 75px;
   width: 100%;
 }
 .seccion .seccion_inner {
   height: 100%;
-  margin: auto 0 auto 0;
-  max-width: 800px;
+  max-width: 1100px;
 }
 .seccion.seccion--hola {
-  color: #181818;
+  color: var(--main-black);
   height: 100vh;
   background-size: cover;
   background-image: url("../assets/vu-anh-TiVPTYCG_3E-unsplash.jpg");
@@ -271,7 +275,7 @@ a {
 .seccion.seccion--sistemas,
 .seccion.seccion--futuro {
   background-color: white;
-  color: #555;
+  color: var(--main-gray);
   align-items: center;
 }
 
@@ -279,19 +283,19 @@ a {
 .seccion.seccion--estudios,
 .seccion.seccion--idiomas-hobbies {
   background-color: white;
-  color: #555;
+  color: var(--main-gray);
   padding: 1vh 50px 5vh 75px;
   align-items: center;
 }
 .seccion.seccion--contacto {
-  background-color: rgba(9, 162, 255, 0.85);
-  color: #181818;
+  background-color: var(--main-blue);
+  color: var(--main-black);
   padding: 3vh 50px 10vh 75px;
 }
 
 .seccions.seccion-videos {
   background-color: white;
-  color: #555;
+  color: var(--main-gray)
   padding: 1vh 50px 5vh 75px;
 }
 
@@ -404,10 +408,14 @@ h2,
 p {
   font-size: 0.75rem;
   line-height: 1.4;
+  text-align: justify;
 }
 @media (min-width: 30rem) {
   p {
-    font-size: 0.875rem;
+    font-size: 0.6rem;
+  }
+  ol {
+    font-size: 0.6rem;
   }
 }
 p a {
@@ -432,13 +440,7 @@ p a:hover {
   color: rgba(0, 0, 0, 0.5);
 }
 
-i {
-  width: 10%;
-  height: auto;
-  margin: 0px 15px 0px 0px;
-  text-align: center;
-}
-
+/* Grid de columnas y contenido*/
 .wrapper {
   padding: 5px;
   max-width: 960px;
@@ -453,7 +455,7 @@ i {
 }
 .columna {
   flex: 1;
-  border: 1px solid gray;
+  /*border: 1px solid gray;*/
   margin: 2px;
   padding: 10px;
   &:first-child {
@@ -492,31 +494,58 @@ i {
 .contenedor {
   display: flex;
   flex-direction: row;
+  flex-wrap: nowrap;
   align-items: center;
 }
 
 .contenido-titulo {
   font-size: 1rem;
-}
-
-/* Footer */
-footer {
-  display: flex;
-  padding: 2rem 0 1rem 0;
   text-align: center;
-  position: sticky;
-  justify-content: center;
 }
 
-footer p {
-  font-size: 12px;
+/* Contenido */
+.historia-lista {
+  padding-left: 35px;
+  padding-bottom: 50px;
+}
+ol > li {
+  margin-top: 10px;
+  padding-top: 10px;
+  text-align: justify;
 }
 
-.footer-contacto {
-  background-color: rgba(9, 162, 255, 0.85);
+.col-sm-4 {
+  width: 33.33333333%;
+  float: left;
+  position: relative;
+  min-height: 1px;
+  padding-right: 15px;
+  padding-left: 15px;
 }
 
-/*Timeline*/
+.texto-centrado {
+  text-align: center;
+}
+
+.desc {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.3em;
+  line-height: 1.7em;
+  letter-spacing: 0.03em;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.icon-me {
+  text-align: center;
+  font-size: 1.5em;
+  color: var(--main-blue);
+  padding-top: 20px;
+  padding-bottom: 25px;
+  text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3);
+}
+
+/* Timeline */
 .timeline-contenedor {
   max-width: 1200px;
   margin: 0 auto;
@@ -749,6 +778,7 @@ footer p {
   }
 }
 
+/* Formulario cocntacto */
 .contenedor-contacto {
   max-width: 900px;
   width: 100%;
@@ -827,8 +857,8 @@ fieldset {
   cursor: pointer;
   width: 100%;
   border: none;
-  background: rgba(9, 162, 255, 0.85);
-  color: #181818;
+  background: var(--main-blue);
+  color: var(--main-black);
   margin: 0 0 5px;
   padding: 10px;
   font-size: 15px;
@@ -862,4 +892,132 @@ fieldset {
 
 :-ms-input-placeholder {
   color: #888;
+}
+
+/* Footer */
+footer {
+  display: flex;
+  padding: 2rem 0 1rem 0;
+  text-align: center;
+  position: sticky;
+  justify-content: center;
+}
+
+footer p {
+  font-size: 12px;
+}
+
+.footer-contacto {
+  background-color: var(--main-blue);
+}
+
+/* Tabla */
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%;
+  border: 1px solid #ddd;
+  font-size: 0.6rem;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 1.5rem;
+}
+
+th {
+  color: var(--main-grey);
+  background: var(--main-light-blue);
+  border-bottom: 4px solid #1818185c;
+  border-right: 1px solid #1818185c;
+  font-size: 23px;
+  font-weight: 100;
+  padding: 0.8rem;
+  text-align: left;
+  vertical-align: middle;
+}
+
+th:first-child {
+  border-top-left-radius: 3px;
+}
+
+th:last-child {
+  border-top-right-radius: 3px;
+  border-right: none;
+}
+
+tr {
+  border-top: 1px solid #c1c3d1;
+  border-bottom-: 1px solid #c1c3d1;
+  color: var(--main-gray);
+  font-size: 16px;
+  font-weight: normal;
+}
+
+tr:first-child {
+  border-top: none;
+}
+
+tr:last-child {
+  border-bottom: none;
+}
+
+tr:nth-child(odd) td {
+  background: #ebebeb;
+}
+
+tr:last-child td:first-child {
+  border-bottom-left-radius: 3px;
+}
+
+tr:last-child td:last-child {
+  border-bottom-right-radius: 3px;
+}
+
+td {
+  background: #ffffff;
+  padding: 20px;
+  text-align: left;
+  vertical-align: middle;
+  font-weight: 300;
+  font-size: 0.6rem;
+  border-right: 1px solid #c1c3d1;
+  text-align: justify;
+}
+
+td:last-child {
+  border-right: 0px;
+}
+
+th.text-left {
+  text-align: left;
+}
+
+th.text-center {
+  text-align: center;
+}
+
+th.text-right {
+  text-align: right;
+}
+
+td.text-left {
+  text-align: left;
+}
+
+td.text-center {
+  text-align: center;
+}
+
+td.text-right {
+  text-align: right;
+}
+
+/*Variables*/
+:root {
+  --main-blue: rgba(9, 162, 255, 0.85);
+  --main-light-blue: rgba(9, 161, 255, 0.521);
+  --main-black: #181818;
+  --main-gray: #555;
+  --main-surface-color: #fff;
+  --curve: 40;
 }
