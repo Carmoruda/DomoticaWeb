@@ -11,7 +11,7 @@
   <img alt="Github repo forks" src="https://img.shields.io/github/forks/carmoruda/DomoticaWeb?color=388bfd&labelColor=202328&style=for-the-badge">
   <img alt="Github repo open issues" src="https://img.shields.io/github/issues/carmoruda/DomoticaWeb?color=f85149&labelColor=202328&style=for-the-badge">
   <img alt="Github repo open pull requests" src="https://img.shields.io/github/issues-pr/carmoruda/DomoticaWeb?color=a371f7&labelColor=202328&style=for-the-badge">
-  <img alt="Github last commit (branch)" src="https://img.shields.io/github/last-commit/carmoruda/DomoticaWeb/main?color=2ea043&labelColor=202328&label=Last Update%3F&style=for-the-badge">
+  <img alt="Github last commit (branch)" src="https://img.shields.io/github/last-commit/carmoruda/DomoticaWeb/main?color=2ea043&labelColor=202328&label=Last%20Update%3F&style=for-the-badge">
   <img alt="Github repo license" src="https://img.shields.io/github/license/carmoruda/DomoticaWeb?color=15121C&labelColor=202328&style=for-the-badge">
 </div>
 
